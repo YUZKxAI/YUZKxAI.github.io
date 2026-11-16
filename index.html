@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YUZK.AI — Coming Soon</title>
+  <meta name="description" content="YUZK.AI — coming soon.">
+  <meta name="theme-color" content="#08090c">
+  <meta property="og:title" content="YUZK.AI">
+  <meta property="og:description" content="coming soon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090c'/%3E%3Cpath d='M16 17h9l7 12 7-12h9L36 40v9h-8v-9L16 17z' fill='%23f5f6f8'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08090c;
+      --ink: #f5f6f8;
+      --muted: #8b909c;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* soft ambient glow */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(60vw 60vw at 50% 46%, rgba(120, 132, 255, .10), transparent 70%),
+        radial-gradient(40vw 40vw at 50% 100%, rgba(255, 255, 255, .045), transparent 70%);
+      pointer-events: none;
+    }
+    main {
+      position: relative;
+      padding: 2rem;
+      width: 100%;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.75rem, 11vw, 8rem);
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-indent: .14em; /* balance the trailing letter-spacing */
+      line-height: 1;
+      background: linear-gradient(180deg, #ffffff 0%, #b9becb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: rise 1s cubic-bezier(.2, .7, .2, 1) both;
+    }
+    .rule {
+      width: 2.5rem;
+      height: 1px;
+      margin: clamp(1.75rem, 4vw, 2.75rem) auto;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .38), transparent);
+      animation: fade 1.2s ease .35s both;
+    }
+    p {
+      margin: 0;
+      font-size: clamp(.75rem, 1.6vw, 1.05rem);
+      font-weight: 400;
+      letter-spacing: .42em;
+      text-indent: .42em;
+      text-transform: lowercase;
+      color: var(--muted);
+      animation: rise 1s cubic-bezier(.2, .7, .2, 1) .2s both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
+      to   { opacity: 1; transform: none; filter: blur(0); }
+    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      h1, p, .rule { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>YUZK.AI</h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p>coming soon</p>
+  </main>
+</body>
+</html>
